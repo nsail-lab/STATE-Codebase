@@ -36,7 +36,7 @@ python STATE.py train \
   --data_dir /path/to/trajectory/dataset \
   --annotations_file /path/to/annotations.json \
   --output_dir state_output \
-  --threshold 3 \
+  --threshold 7 \
   --batch_size 64 \
   --epochs 2000 \
   --threat_model_path /path/to/frozen_threat_alignment_model.pth \
