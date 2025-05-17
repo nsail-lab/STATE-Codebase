@@ -1,14 +1,29 @@
 # STATE-Codebase
 
-## Requirements
+## Environment Setup
 
-- Python 3.7+
-- PyTorch 1.7+
-- torchvision
-- numpy
-- matplotlib
-- Pillow
-- plotly (for visualization)
+Create a conda environment using the provided YAML file:
+
+```bash
+conda env create -f state.yaml
+conda activate state
+```
+
+## Dataset Extraction
+
+Before running the code, you need to extract the dataset and inference images:
+
+1. Extract the dataset:
+```bash
+unzip dataset.zip
+```
+
+2. Extract the inference images:
+```bash
+unzip state_inference_images.zip
+```
+
+These archives contain the necessary folder structure for training and inference.
 
 ## Usage
 
@@ -24,7 +39,7 @@ python STATE.py train \
   --threshold 3 \
   --batch_size 64 \
   --epochs 2000 \
-  --threat_model_path /path/to/classifier.pth \
+  --threat_model_path /path/to/frozen_threat_alignment_model.pth \
   --cuda
 ```
 
